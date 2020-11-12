@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
+Route::get('/detail/{name}', 'HomeController@getDetail');
+Route::get('/result/{name}', 'HomeController@getResults');
+Route::get('/pdf/{name}', 'HomeController@generatePDF');
+Route::get('/assets', 'HomeController@getAssets');
+
+
